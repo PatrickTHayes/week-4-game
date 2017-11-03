@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/firefly.jpg");
+    background-size: 100%;
+    width: 100%;
+    color: white;
+}
+
+.bottomcentral img {
+    margin: auto;
+}
