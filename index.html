@@ -3,29 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Firefly Hangman game</title>
+    <title>Warframe RPG game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <h1>Instructions to Firefly Hangman</h1>;
-    <h2>Press any key to play. Previous guesses, remaining guesses, and the word outline are shown.</h2>
-    <br><br>
-    <h1>Number of guesses remaining: <span id="remainGuess">Placeholder</span></h1>
-    <h1>List of previous guesses:</h1>
-    <h1 id="previousGuessList">Placeholder</h1>
-    <h1>Hangman's word :
-        <!--<span id="wordHolder">Placeholder</span>--></h1>
-    <h1>
-        <div id="gameoutput"></div>
-    </h1>
-    <h1>Wins: <span id="wins"></span> Losses: <span id="losses"></span> </h1>
-    <div class="bottomcentral"><img src="#" id="bci"></img>
+    <div class="container-fluid">
+        <div class="row row1">
+            <div class="col-md-12">
+                <h1>Warframe RPG</h1>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="row subrow1-1">
+                <div class="col-md-12">
+                    <h2>Character List</h2>
+                </div>
+            </div>
+            <div class="row subrow2-1">
+                <div class="col-md-3 chars charNames" id="char0" value="excalibur">
+                    <h3>Excalibur<br>
+                        <img src="assets/images/excalibur.png"></img>;</h3>;
+                    <h3>Health:1000 Attack 100 Counter Attack:100</h3>
+                </div>
+                <div class="col-md-3 chars charNames" id="char1" value="mirage"></div>
+                <div class="col-md-3 chars charNames" id="char2" value="trinity"></div>
+                <div class="col-md-3 chars charNames" id="char3" value="valkyr"></div>
+            </div>
+        </div>
+        <div class="row row3">
+            <div class="row subrow1-3">
+                <div class="col-md-12">
+                    <h2>Battle Arena</h2>
+                </div>
+            </div>
+            <div class="row subrow2-3">
+                <div class="col-md-3"></div>
+                <div class="col-md-3" id="yourChar"></div>
+                <div class="col-md-3" id="opponentChar"></div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <div class="row row4">
+            <div class="col-md-5"></div>
+            <div class="col-md-2"><button type="button" class="btn btn-danger" id="attackBtn">Attack</button></div>
+            <div class="col-md-5"></div>
+        </div>
     </div>
 
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 
 </html>

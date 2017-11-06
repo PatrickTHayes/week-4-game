@@ -1,10 +1,28 @@
 body {
-    background-image: url("../images/firefly.jpg");
+    text-align: center;
+    background-image: url("../images/warframe.png");
     background-size: 100%;
-    width: 100%;
-    color: white;
 }
 
-.bottomcentral img {
-    margin: auto;
+h1,
+h2,
+body,
+h3 {
+    background-color: white;
+    opacity: .75;
+    color: black;
+}
+
+.row img {
+    height: 200px;
+}
+
+#yourChar,
+#opponentChar {
+    background-color: white;
+}
+
+.btn-danger {
+    height: 100px;
+    width: 100px;
 }
