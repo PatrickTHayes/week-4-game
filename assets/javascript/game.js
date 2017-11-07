@@ -18,25 +18,25 @@ $(document).ready(function() {
             excalibur: {
                 name: "excalibur",
                 charId: 0,
-                attack: 20,
+                attack: 25,
                 health: 400,
-                counterAttack: 30,
+                counterAttack: 35,
                 imagesrc: "assets/images/excalibur.png" //?????????   //url("../images/excalibur.png")''
             },
             mirage: {
                 name: "mirage",
                 charId: 1,
                 attack: 10,
-                health: 600,
-                counterAttack: 40,
+                health: 500,
+                counterAttack: 45,
                 imagesrc: "assets/images/mirage.png"
             },
             trinity: {
                 name: "trinity",
                 charId: 2,
                 attack: 30,
-                health: 350,
-                counterAttack: 20,
+                health: 375,
+                counterAttack: 25,
                 imagesrc: "assets/images/trinity.png"
             },
             valkyr: {
@@ -44,7 +44,7 @@ $(document).ready(function() {
                 charId: 3,
                 attack: 5,
                 health: 800,
-                counterAttack: 25,
+                counterAttack: 30,
                 imagesrc: "assets/images/valkyr.png"
             }
         };
