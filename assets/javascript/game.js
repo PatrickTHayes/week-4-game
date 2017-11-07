@@ -1,38 +1,6 @@
 $(document).ready(function() {
-    var charList = {
-        excalibur: {
-            name: "excalibur",
-            charId: 0,
-            attack: 20,
-            health: 300,
-            counterAttack: 30,
-            imagesrc: "assets/images/excalibur.png" //?????????   //url("../images/excalibur.png")''
-        },
-        mirage: {
-            name: "mirage",
-            charId: 1,
-            attack: 10,
-            health: 500,
-            counterAttack: 40,
-            imagesrc: "assets/images/mirage.png"
-        },
-        trinity: {
-            name: "trinity",
-            charId: 2,
-            attack: 30,
-            health: 250,
-            counterAttack: 20,
-            imagesrc: "assets/images/trinity.png"
-        },
-        valkyr: {
-            name: "valkyr",
-            charId: 3,
-            attack: 5,
-            health: 700,
-            counterAttack: 25,
-            imagesrc: "assets/images/valkyr.png"
-        }
-    }
+    var charList = setObject();
+    //var clone = Object.assign({}, obj);
     var resetList = charList;
     var haveOpponent = false;
     var haveChar = false;
@@ -43,10 +11,48 @@ $(document).ready(function() {
     var baseAttack = 0;
     var charListKeyArray = Object.keys(charList);
     var wins = 0;
-    console.log(resetList);
     restart();
 
+    function setObject() {
+        return {
+            excalibur: {
+                name: "excalibur",
+                charId: 0,
+                attack: 20,
+                health: 400,
+                counterAttack: 30,
+                imagesrc: "assets/images/excalibur.png" //?????????   //url("../images/excalibur.png")''
+            },
+            mirage: {
+                name: "mirage",
+                charId: 1,
+                attack: 10,
+                health: 600,
+                counterAttack: 40,
+                imagesrc: "assets/images/mirage.png"
+            },
+            trinity: {
+                name: "trinity",
+                charId: 2,
+                attack: 30,
+                health: 350,
+                counterAttack: 20,
+                imagesrc: "assets/images/trinity.png"
+            },
+            valkyr: {
+                name: "valkyr",
+                charId: 3,
+                attack: 5,
+                health: 800,
+                counterAttack: 25,
+                imagesrc: "assets/images/valkyr.png"
+            }
+        };
+
+    }
+
     function restart() {
+        charList = setObject();
         for (var i = 0; i < 4; i++) { //loop through charList and set up pictures. not sure if messing up code --Object.keys(charList).length
             character = charListKeyArray[i];
             $("#char" + i).html('<h3>' + charList[character].name + '</h3><img src =' + charList[character].imagesrc + '><h3> attack: ' + charList[character].attack + '</h3><h3>Health: ' + charList[character].health + '</h3><h3>Counter Attack :' + charList[character].counterAttack + '</h3>')
@@ -56,9 +62,10 @@ $(document).ready(function() {
         haveChar = false;
         $("#opponentChar").text('');
         $("#yourChar").text('');
+
         // I would add a list of character attribute equal to their Original values here. (ie reset health, attack, for all character)
-        charList = resetList;
-        console.log(charList);
+        //console.log(resetList);
+        //console.log(charList);
     }
 
 
