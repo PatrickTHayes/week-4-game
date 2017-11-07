@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     function restart() {
         charList = setObject();
-        for (var i = 0; i < 4; i++) { //loop through charList and set up pictures. not sure if messing up code --Object.keys(charList).length
+        for (var i = 0; i < 4; i++) { //loop through charList and set up pictures. not sure if this code was messing up --Object.keys(charList).length
             character = charListKeyArray[i];
             $("#char" + i).html('<h3>' + charList[character].name + '</h3><img src =' + charList[character].imagesrc + '><h3> attack: ' + charList[character].attack + '</h3><h3>Health: ' + charList[character].health + '</h3><h3>Counter Attack :' + charList[character].counterAttack + '</h3>')
         }
@@ -62,10 +62,6 @@ $(document).ready(function() {
         haveChar = false;
         $("#opponentChar").text('');
         $("#yourChar").text('');
-
-        // I would add a list of character attribute equal to their Original values here. (ie reset health, attack, for all character)
-        //console.log(resetList);
-        //console.log(charList);
     }
 
 
@@ -77,17 +73,8 @@ $(document).ready(function() {
             character = characterFirst.trim();
             haveChar = true;
             baseAttack = charList[character].attack
-            //console.log(charList[character].imagesrc);
-            //console.log(characterFirst);
-            //removeFromList(character);
-            //$("#yourChar").text(charList.excalibur.attack)
-            //console.log(character.split(''));
-            console.log(typeof character)
-            //$("#yourChar").html('<img src =' + charList.excalibur.imagesrc + '>') //brings up the expected image in the right location
             displayYourChar();
             removeFromList(character);
-            //$("#yourChar").text(charList.excalibur.attack)
-
         }
         else if (haveOpponent === false) {
             characterSecond = $(this).text();
@@ -96,9 +83,6 @@ $(document).ready(function() {
             haveOpponent = true;
             displayOpponentChar();
             removeFromList(currentOpponent);
-            console.log(currentOpponent);
-            console.log(characterSecond);
-            //removeFromList(currentOpponent);
         }
         else {
             alert(" you must beat your opponent first before choosing your next opponent!")
@@ -106,9 +90,8 @@ $(document).ready(function() {
     })
 
     function removeFromList(charactername) {
-        var clearout = "  ";
-        charIndex = charList[charactername].charId; // need to find a better way.
-        //charIndex=charList.'charactername'.charId;
+        var clearout = "";
+        charIndex = charList[charactername].charId;
         console.log(charIndex);
         if (charIndex === 0) {
             $("#char0").text(clearout);
@@ -158,8 +141,6 @@ $(document).ready(function() {
     function attack(x, y) {
         charList[y].health = charList[y].health - charList[x].attack;
         charList[x].attack = charList[x].attack + baseAttack;
-        console.log(charList[x].attack);
-        console.log(charList[y].health);
     }
 
     function counterAttack(x, y) {
